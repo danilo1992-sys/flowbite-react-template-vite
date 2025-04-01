@@ -10,19 +10,19 @@ export default function Download() {
   }, [])
 
   const handleDownload = () => {
-    window.open('http://localhost:3000/download/', '_blank')
+    window.open('https://removebackground-backend.onrender.com/download/', '_blank')
     setPageState('upload')
   }
   return (
     <>
-      <div className="flex justify-center pt-12">
+      <div className="flex justify-center pt-100">
         <Card
           className="max-w-sm"
           imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="http://localhost:3000/download/"
         />
       </div>
-      <div className="flex justify-center pt-100" >
+      <div className="flex justify-center pt-5" >
         <Button
           className="cursor-pointer"
           color="light"

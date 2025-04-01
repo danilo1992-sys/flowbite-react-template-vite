@@ -29,7 +29,7 @@ export function Uploads() {
     formdata.append("imgbackground", selectedFile)
 
     try {
-      const res = await fetch("http://localhost:3000/img", {
+      const res = await fetch("https://removebackground-backend.onrender.com/img", {
         method: "POST",
         body: formdata
       });
@@ -48,7 +48,7 @@ export function Uploads() {
 
   return (
     <>
-      <div className="flex justify-center pt-12">
+      <div className="flex justify-center pt-100">
         <div className="flex w-96 items-center justify-center">
           <Label
             htmlFor="dropzone-file"

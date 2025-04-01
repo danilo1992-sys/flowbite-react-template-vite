@@ -8,7 +8,7 @@ export function Loading() {
   useEffect(() => {
     const time = setTimeout(() => {
       setPageState('download')
-    }, 10000);
+    }, 5000);
 
     return () => clearTimeout(time)
   }, [])
