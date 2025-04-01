@@ -1,13 +1,15 @@
-import { FileInput, Label, Button } from "flowbite-react";
+import { Button, FileInput, Label } from "flowbite-react";
 import { useState } from "react";
-import { Alerta } from './Alert'
+import Cloud from "../icons/cloud";
+import { useAppStore } from "../store";
+import { Alerta } from './Alert';
+import { Alertconexion } from "./Alertconexion";
 import { Alerterror } from "./Alerterror";
 import { Alertimg } from "./Alertimg";
-import { Alertconexion } from "./Alertconexion";
-import Cloud from "../icons/cloud";
 
 export function Uploads() {
   const [selectedFile, setSelectedFile] = useState<File | string>("");
+  const setPageState = useAppStore((state) => state.setPageState);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -15,12 +17,14 @@ export function Uploads() {
     }
   };
 
-
   const submit = async () => {
     if (!selectedFile) {
       <Alertimg />
       return
     }
+
+    setPageState('loading')
+
     const formdata = new FormData()
     formdata.append("imgbackground", selectedFile)
 
@@ -44,7 +48,6 @@ export function Uploads() {
 
   return (
     <>
-      <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
       <div className="flex justify-center pt-12">
         <div className="flex w-96 items-center justify-center">
           <Label
