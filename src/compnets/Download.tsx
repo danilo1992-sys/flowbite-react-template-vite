@@ -3,16 +3,19 @@ import { useAppStore } from "../store";
 import { useEffect } from "react";
 
 export default function Download() {
-  const setPageState = useAppStore((state) => state.setPageState)
+  const setPageState = useAppStore((state) => state.setPageState);
 
   useEffect(() => {
-    setPageState('download')
-  }, [])
+    setPageState("download");
+  }, []);
 
   const handleDownload = () => {
-    window.open('https://removebackground-backend.onrender.com/download/', '_blank')
-    setPageState('upload')
-  }
+    window.open(
+      "https://removebackground-backend.onrender.com/download/",
+      "_blank",
+    );
+    setPageState("upload");
+  };
   return (
     <>
       <div className="flex justify-center pt-100">
@@ -22,7 +25,7 @@ export default function Download() {
           imgSrc="http://localhost:3000/download/"
         />
       </div>
-      <div className="flex justify-center pt-5" >
+      <div className="flex justify-center pt-5">
         <Button
           className="cursor-pointer"
           color="light"
@@ -34,5 +37,5 @@ export default function Download() {
         </Button>
       </div>
     </>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 interface AppState {
-  pageState: 'upload' | 'loading' | 'download';
-  setPageState: (state: 'upload' | 'loading' | 'download') => void;
+  pageState: "upload" | "loading" | "download";
+  setPageState: (state: "upload" | "loading" | "download") => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
-  pageState: 'upload',
+  pageState: "upload",
   setPageState: (state) => set({ pageState: state }),
 }));

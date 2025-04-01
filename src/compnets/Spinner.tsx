@@ -3,15 +3,15 @@ import { useEffect } from "react";
 import { useAppStore } from "../store";
 
 export function Loading() {
-  const setPageState = useAppStore((state) => state.setPageState)
+  const setPageState = useAppStore((state) => state.setPageState);
 
   useEffect(() => {
     const time = setTimeout(() => {
-      setPageState('download')
+      setPageState("download");
     }, 5000);
 
-    return () => clearTimeout(time)
-  }, [])
+    return () => clearTimeout(time);
+  }, []);
 
   return (
     <>
@@ -22,5 +22,5 @@ export function Loading() {
         </Button>
       </div>
     </>
-  )
+  );
 }

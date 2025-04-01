@@ -1,22 +1,22 @@
 import { useAppStore } from "./store";
-import { Uploads } from './compnets/uploads';
-import { Loading } from './compnets/Spinner';
+import { Uploads } from "./compnets/uploads";
+import { Loading } from "./compnets/Spinner";
 import Download from "./compnets/Download";
 
 export default function App() {
   const pageState = useAppStore((state) => state.pageState);
 
   const render = () => {
-    if (pageState === 'upload') {
-      return <Uploads />
+    if (pageState === "upload") {
+      return <Uploads />;
     }
-    if (pageState === 'loading') {
-      return <Loading />
+    if (pageState === "loading") {
+      return <Loading />;
     }
-    if (pageState === 'download') {
-      return <Download />
+    if (pageState === "download") {
+      return <Download />;
     }
-  }
+  };
 
   return (
     <>

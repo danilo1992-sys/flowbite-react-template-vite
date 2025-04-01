@@ -1,6 +1,3 @@
-
 export default function Background() {
-  return (
-    <div>Background</div>
-  )
+  return <div>Background</div>;
 }

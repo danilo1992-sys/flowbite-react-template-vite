@@ -1,4 +1,3 @@
-
 import { Alert } from "flowbite-react";
 
 export function Alerta() {
