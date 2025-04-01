@@ -1,7 +1,7 @@
-import { useAppStore } from "./store";
-import { Uploads } from "./compnets/uploads";
-import { Loading } from "./compnets/Spinner";
 import Download from "./compnets/Download";
+import { Loading } from "./compnets/Spinner";
+import { Uploads } from "./compnets/uploads";
+import { useAppStore } from "./store";
 
 export default function App() {
   const pageState = useAppStore((state) => state.pageState);
