@@ -72,6 +72,7 @@ export function Uploads() {
           className="cursor-pointer"
           pill
           color="light"
+          size="xl"
           onClick={submit}>
           Convert
         </Button>

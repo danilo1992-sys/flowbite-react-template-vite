@@ -1,7 +1,7 @@
 import { useAppStore } from "./store";
 import { Uploads } from './compnets/uploads';
 import { Loading } from './compnets/Spinner';
-//import { Button, Spinner } from "flowbite-react";
+import Download from "./compnets/Download";
 
 export default function App() {
   const pageState = useAppStore((state) => state.pageState);
@@ -12,6 +12,9 @@ export default function App() {
     }
     if (pageState === 'loading') {
       return <Loading />
+    }
+    if (pageState === 'download') {
+      return <Download />
     }
   }
 
