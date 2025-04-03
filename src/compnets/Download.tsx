@@ -22,7 +22,7 @@ export default function Download() {
         <Card
           className="max-w-sm"
           imgAlt="Meaningful alt text for an image that is not purely decorative"
-          imgSrc="http://localhost:3000/download/"
+          imgSrc="https://removebackground-backend.onrender.com/download"
         />
       </div>
       <div className="flex justify-center pt-5">
